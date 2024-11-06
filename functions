@@ -1,0 +1,880 @@
+
+
+abs(x) – Returns the absolute value of a number.
+all(iterable) – Returns True if all elements in the iterable are True.
+any(iterable) – Returns True if any element in the iterable is True.
+ascii(object) – Returns a string with a printable representation of an object, escaping non-ASCII characters.
+bin(x) – Converts an integer to a binary string.
+bool([x]) – Converts a value to a Boolean (True or False).
+breakpoint() – Enters a debugging session at the point of the call.
+bytearray([source[, encoding[, errors]]]) – Returns a mutable array of bytes.
+bytes([source[, encoding[, errors]]]) – Returns an immutable array of bytes.
+callable(object) – Checks if an object is callable (i.e., can be called like a function).
+chr(i) – Converts an integer to its Unicode character.
+classmethod(function) – Converts a method to a class method.
+compile(source, filename, mode, flags=0, dont_inherit=False, optimize=-1) – Compiles source code into a code object.
+complex([real[, imag]]) – Creates a complex number.
+delattr(object, name) – Deletes an attribute from an object.
+dict([mapping]) – Creates a dictionary.
+dir([object]) – Returns a list of attributes and methods of an object.
+divmod(a, b) – Returns a tuple of quotient and remainder when dividing a by b.
+enumerate(iterable, start=0) – Returns an iterator of tuples (index, value) for an iterable.
+eval(expression[, globals[, locals]]) – Evaluates a Python expression in a given context.
+exec(object[, globals[, locals]]) – Executes Python code dynamically.
+filter(function, iterable) – Filters elements of an iterable for which function returns True.
+float([x]) – Converts a value to a floating-point number.
+format(value, format_spec) – Formats a value according to format_spec.
+frozenset([iterable]) – Returns an immutable set.
+getattr(object, name[, default]) – Retrieves an attribute from an object.
+globals() – Returns a dictionary of the global symbol table.
+hasattr(object, name) – Checks if an object has a given attribute.
+hash(object) – Returns the hash value of an object.
+help([object]) – Invokes the built-in help system.
+hex(x) – Converts an integer to a hexadecimal string.
+id(object) – Returns the unique identifier of an object.
+input([prompt]) – Reads a line of input from the user.
+int([x[, base]]) – Converts a value to an integer.
+isinstance(object, classinfo) – Checks if an object is an instance of a class or tuple of classes.
+issubclass(class, classinfo) – Checks if a class is a subclass of another class.
+iter(object[, sentinel]) – Returns an iterator for an object.
+len(s) – Returns the number of items in an object.
+list([iterable]) – Creates a list from an iterable.
+locals() – Returns a dictionary of the current local symbol table.
+map(function, iterable, ...) – Applies a function to all items in an iterable.
+max(iterable, *[, key, default]) – Returns the largest item in an iterable or among arguments.
+memoryview(object) – Returns a memory view object of a given object.
+min(iterable, *[, key, default]) – Returns the smallest item in an iterable or among arguments.
+next(iterator[, default]) – Retrieves the next item from an iterator.
+object() – Returns a new featureless object.
+oct(x) – Converts an integer to an octal string.
+open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None) – Opens a file and returns a file object.
+ord(c) – Returns the Unicode code point of a character.
+pow(x, y[, z]) – Returns x to the power of y, optionally modulo z.
+print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False) – Prints objects to the console.
+property(fget=None, fset=None, fdel=None, doc=None) – Returns a property attribute.
+range([start,] stop[, step]) – Returns an immutable sequence of numbers.
+repr(object) – Returns a string representation of an object.
+reversed(seq) – Returns a reversed iterator for a sequence.
+round(number[, ndigits]) – Rounds a number to a given number of decimal places.
+set([iterable]) – Creates a set from an iterable.
+setattr(object, name, value) – Sets an attribute of an object to a given value.
+slice(start, stop[, step]) – Returns a slice object representing a set of indices.
+sorted(iterable, *, key=None, reverse=False) – Returns a sorted list from an iterable.
+staticmethod(function) – Converts a function to a static method.
+str([object]) – Converts an object to a string.
+sum(iterable, /, start=0) – Returns the sum of an iterable of numbers.
+super([type[, object-or-type]]) – Returns a temporary superclass proxy.
+tuple([iterable]) – Creates a tuple from an iterable.
+type(object) – Returns the type of an object.
+vars([object]) – Returns the __dict__ attribute of an object.
+zip(*iterables) – Aggregates elements from each iterable into tuples.
+__import__(name, globals=None, locals=None, fromlist=(), level=0) – Imports a module.
+
+
+
+
+
+
+
+math Module Functions
+math.ceil(x) – Returns the smallest integer greater than or equal to x.
+math.floor(x) – Returns the largest integer less than or equal to x.
+math.sqrt(x) – Returns the square root of x.
+math.factorial(x) – Returns the factorial of x.
+math.pow(x, y) – Returns x raised to the power of y.
+math.log(x[, base]) – Returns the logarithm of x to the specified base.
+math.sin(x) – Returns the sine of x (in radians).
+math.cos(x) – Returns the cosine of x (in radians).
+math.tan(x) – Returns the tangent of x (in radians).
+math.degrees(x) – Converts an angle from radians to degrees.
+math.radians(x) – Converts an angle from degrees to radians.
+random Module Functions
+random.seed(a=None) – Initializes the random number generator with a seed.
+random.random() – Returns a random float between 0.0 and 1.0.
+random.randint(a, b) – Returns a random integer between a and b, inclusive.
+random.choice(seq) – Returns a random element from a sequence.
+random.shuffle(x) – Shuffles the items of a list in place.
+random.sample(population, k) – Returns a list of k unique random elements from a sequence.
+random.uniform(a, b) – Returns a random floating-point number between a and b.
+datetime Module Functions
+datetime.datetime.now() – Returns the current date and time.
+datetime.datetime.today() – Returns the current date and time.
+datetime.datetime.strptime(date_string, format) – Parses a string into a datetime object based on a format.
+datetime.datetime.strftime(format) – Converts a datetime object into a formatted string.
+datetime.datetime.utcnow() – Returns the current UTC date and time.
+itertools Module Functions
+itertools.chain(*iterables) – Combines multiple iterables into a single iterable.
+itertools.combinations(iterable, r) – Returns all r-length combinations of elements in the iterable.
+itertools.permutations(iterable, r) – Returns all r-length permutations of elements in the iterable.
+itertools.product(*iterables, repeat=1) – Returns the Cartesian product of input iterables.
+itertools.cycle(iterable) – Cycles through the iterable indefinitely.
+itertools.count(start=0, step=1) – Returns an iterator that counts indefinitely from start.
+collections Module Functions
+collections.Counter(iterable) – Returns a dictionary-like object that counts occurrences of elements.
+collections.defaultdict(default_factory) – Returns a dictionary-like object with a default value for missing keys.
+collections.namedtuple(typename, field_names) – Returns a tuple subclass with named fields.
+collections.deque([iterable[, maxlen]]) – Returns a double-ended queue that supports fast appends and pops from either end.
+functools Module Functions
+functools.lru_cache(maxsize=None) – Adds caching to a function to speed up repetitive calls.
+functools.reduce(function, iterable) – Applies a function of two arguments cumulatively to the items of an iterable, reducing it to a single value.
+functools.partial(func, *args, **keywords) – Returns a new partial function with fixed arguments.
+re Module (Regular Expressions) Functions
+re.search(pattern, string) – Searches for a pattern in a string; returns a match object if found.
+re.match(pattern, string) – Checks if a pattern matches the start of a string.
+re.findall(pattern, string) – Returns a list of all matches of a pattern in a string.
+re.sub(pattern, repl, string) – Replaces all occurrences of a pattern in a string with a replacement.
+json Module Functions
+json.dumps(obj) – Converts a Python object to a JSON-formatted string.
+json.loads(s) – Parses a JSON-formatted string to a Python object.
+json.dump(obj, file) – Writes a Python object to a file as JSON.
+json.load(file) – Parses JSON from a file to a Python object.
+os Module Functions
+os.getcwd() – Returns the current working directory.
+os.listdir(path='.') – Returns a list of directory contents.
+os.mkdir(path) – Creates a new directory at the specified path.
+os.remove(path) – Removes a file at the specified path.
+os.rmdir(path) – Removes an empty directory at the specified path.
+sys Module Functions
+sys.exit([arg]) – Exits from Python with an optional status code.
+sys.argv – Returns the list of command-line arguments passed to a script.
+sys.getsizeof(object) – Returns the size of an object in bytes.
+sys.path – A list of directories that the interpreter searches for modules.
+subprocess Module Functions
+subprocess.run(args, **kwargs) – Runs a command and waits for it to complete.
+subprocess.call(args, **kwargs) – Runs a command and returns its exit status.
+subprocess.check_output(args, **kwargs) – Runs a command and returns its output.
+typing Module (for Type Hints)
+List[Type] – Specifies a list of elements of a specific type.
+Tuple[Type1, Type2, ...] – Specifies a tuple of specified types.
+Dict[KeyType, ValueType] – Specifies a dictionary with specified key and value types.
+Optional[Type] – Specifies a type that could also be None.
+Union[Type1, Type2, ...] – Specifies that a value could be one of several types.
+This should cover the most commonly used Python functions and utilities across its built-in modules! Let me know if you want examples or further details on any of them.
+
+
+
+
+
+
+You said:
+add more
+ChatGPT said:
+ChatGPT
+To expand further, here are additional functions from other standard libraries in Python, including commonly used modules like socket, logging, shutil, and csv, which are useful for network programming, file handling, and more.
+
+socket Module (for Networking)
+socket.socket(family=AF_INET, type=SOCK_STREAM) – Creates a new socket using the specified address family and socket type.
+socket.bind(address) – Binds the socket to an address.
+socket.listen(backlog) – Enables a server to accept connections, with a specified backlog.
+socket.accept() – Accepts a connection, returning a new socket and the address of the client.
+socket.connect(address) – Connects the socket to a remote address.
+socket.send(data) – Sends data to the connected socket.
+socket.recv(bufsize) – Receives data from the socket.
+socket.close() – Closes the socket.
+logging Module (for Logging)
+logging.basicConfig(**kwargs) – Configures the root logger with default settings.
+logging.getLogger(name) – Returns a logger with the specified name.
+logging.debug(msg) – Logs a message with level DEBUG.
+logging.info(msg) – Logs a message with level INFO.
+logging.warning(msg) – Logs a message with level WARNING.
+logging.error(msg) – Logs a message with level ERROR.
+logging.critical(msg) – Logs a message with level CRITICAL.
+logging.exception(msg) – Logs an ERROR level message along with exception details.
+shutil Module (for File Operations)
+shutil.copy(src, dst) – Copies a file from src to dst.
+shutil.copy2(src, dst) – Similar to copy but also copies metadata.
+shutil.copytree(src, dst) – Recursively copies a directory tree from src to dst.
+shutil.rmtree(path) – Recursively deletes a directory tree at the specified path.
+shutil.move(src, dst) – Moves a file or directory from src to dst.
+shutil.disk_usage(path) – Returns disk usage statistics about the given path.
+csv Module (for CSV File Operations)
+csv.reader(csvfile, delimiter=',') – Returns an iterator that reads rows from a CSV file.
+csv.writer(csvfile, delimiter=',') – Returns an object that writes rows to a CSV file.
+csv.DictReader(csvfile) – Reads rows from a CSV file into dictionaries.
+csv.DictWriter(csvfile, fieldnames) – Writes rows to a CSV file from dictionaries.
+csv.register_dialect(name, **kwargs) – Registers a new CSV dialect with specific parameters.
+csv.unregister_dialect(name) – Removes a registered CSV dialect by name.
+unittest Module (for Testing)
+unittest.TestCase – A base class for creating new test cases.
+unittest.main() – A command-line interface for running tests.
+unittest.assertEqual(a, b) – Asserts that a is equal to b.
+unittest.assertNotEqual(a, b) – Asserts that a is not equal to b.
+unittest.assertTrue(x) – Asserts that x is True.
+unittest.assertFalse(x) – Asserts that x is False.
+unittest.assertRaises(exception, func, *args, **kwargs) – Asserts that a specific exception is raised when calling func.
+time Module (for Time Operations)
+time.time() – Returns the current time in seconds since the epoch.
+time.sleep(seconds) – Suspends execution for the given number of seconds.
+time.localtime([secs]) – Converts a time expressed in seconds to a struct_time in local time.
+time.strftime(format, t) – Formats a struct_time as a string according to a format.
+time.strptime(string, format) – Parses a string to struct_time based on a format.
+datetime Module (Additional Functions)
+datetime.date(year, month, day) – Returns a date object.
+datetime.time(hour=0, minute=0, second=0) – Returns a time object.
+datetime.timedelta(days=0, seconds=0, ...) – Represents a duration for date arithmetic.
+datetime.datetime.combine(date, time) – Combines a date and a time into a datetime.
+hashlib Module (for Hashing)
+hashlib.md5(data) – Returns an MD5 hash object.
+hashlib.sha1(data) – Returns a SHA-1 hash object.
+hashlib.sha256(data) – Returns a SHA-256 hash object.
+hashlib.sha512(data) – Returns a SHA-512 hash object.
+hashlib.new(name, data) – Returns a new hash object using the specified algorithm name.
+heapq Module (for Heap Operations)
+heapq.heappush(heap, item) – Adds an item to the heap, maintaining heap order.
+heapq.heappop(heap) – Removes and returns the smallest item from the heap.
+heapq.heapify(x) – Transforms a list into a heap in-place.
+heapq.nlargest(n, iterable, key=None) – Returns the n largest elements from an iterable.
+heapq.nsmallest(n, iterable, key=None) – Returns the n smallest elements from an iterable.
+copy Module (for Copying Objects)
+copy.copy(obj) – Returns a shallow copy of an object.
+copy.deepcopy(obj) – Returns a deep copy of an object.
+base64 Module (for Encoding/Decoding)
+base64.b64encode(data) – Encodes data to Base64.
+base64.b64decode(data) – Decodes Base64-encoded data.
+base64.urlsafe_b64encode(data) – Encodes data to Base64 with URL-safe encoding.
+base64.urlsafe_b64decode(data) – Decodes URL-safe Base64-encoded data.
+enum Module (for Enumerations)
+enum.Enum – A base class for creating enumerations.
+enum.auto() – Automatically assigns a unique value to an enumeration member.
+xml.etree.ElementTree Module (for XML Parsing)
+ET.Element(tag, attrib={}) – Creates a new XML element.
+ET.SubElement(parent, tag, attrib={}) – Creates a new XML element as a child of a parent.
+ET.parse(file) – Parses an XML file and returns an ElementTree object.
+ET.tostring(element, encoding='unicode') – Serializes an XML element to a string.
+struct Module (for Binary Data)
+struct.pack(fmt, v1, v2, ...) – Packs values into a binary string based on a format.
+struct.unpack(fmt, buffer) – Unpacks a binary string to values based on a format.
+pathlib Module (for Path Manipulation)
+Path.cwd() – Returns the current working directory.
+Path.home() – Returns the home directory.
+Path.iterdir() – Returns an iterator of files in a directory.
+Path.exists() – Checks if the path exists.
+Path.mkdir(parents=False, exist_ok=False) – Creates a new directory.
+These functions and methods across standard libraries cover a wide range of Python functionalities. Each module provides a more specific set of tools, which is ideal for file handling, networking, testing, data handling, and more. Let me know if you'd like further details or examples for any of them!
+
+
+
+
+
+
+You said:
+add more
+ChatGPT said:
+ChatGPT
+Sure! Here are even more Python functions and classes across various additional standard libraries, including modules like threading, asyncio, multiprocessing, tkinter, and others that handle concurrency, GUI development, and more specialized tasks.
+
+threading Module (for Multithreading)
+threading.Thread(target=None, args=(), kwargs={}) – Creates a new thread to run the specified target function with arguments.
+threading.Lock() – Creates a lock object for synchronizing threads.
+threading.RLock() – A reentrant lock that can be acquired multiple times by the same thread.
+threading.Event() – A synchronization event that threads can wait on or set.
+threading.current_thread() – Returns the current thread object.
+threading.active_count() – Returns the number of active threads.
+threading.Timer(interval, function, args=None) – Creates a timer that runs a function after a specified interval.
+asyncio Module (for Asynchronous Programming)
+asyncio.run(coro) – Runs an asynchronous coroutine and blocks until it completes.
+asyncio.create_task(coro) – Schedules an asynchronous coroutine to run as a task.
+asyncio.sleep(delay) – Asynchronous sleep, suspending execution for the specified delay.
+asyncio.gather(*coros) – Runs multiple coroutines concurrently and returns their results.
+asyncio.wait_for(coro, timeout) – Runs a coroutine with a timeout.
+asyncio.Queue() – An asynchronous queue for inter-task communication.
+asyncio.Event() – An event that can be used for inter-task synchronization.
+multiprocessing Module (for Parallel Processing)
+multiprocessing.Process(target=None, args=()) – Creates a new process to run a target function.
+multiprocessing.Pool(processes) – A pool of worker processes to parallelize task execution.
+multiprocessing.Queue() – A process-safe queue for passing data between processes.
+multiprocessing.Lock() – A lock to synchronize access across processes.
+multiprocessing.Value(typecode, value) – A shared memory variable for processes.
+multiprocessing.Array(typecode, size) – A shared memory array for processes.
+tkinter Module (for GUI Development)
+tkinter.Tk() – Initializes the main application window.
+tkinter.Label(master, text) – Displays text or images in a window.
+tkinter.Button(master, text, command) – Adds a button widget with a command callback.
+tkinter.Entry(master) – Adds a single-line text entry field.
+tkinter.Text(master) – Adds a multi-line text field.
+tkinter.Frame(master) – Creates a frame widget for organizing other widgets.
+tkinter.Canvas(master) – A canvas widget for drawing shapes and images.
+tkinter.mainloop() – Starts the Tkinter event loop.
+http.client Module (for HTTP Requests)
+http.client.HTTPConnection(host) – Creates a connection to an HTTP server.
+http.client.HTTPSConnection(host) – Creates a secure HTTPS connection to a server.
+http.client.request(method, url) – Sends an HTTP request.
+http.client.getresponse() – Returns the response from an HTTP request.
+http.client.HTTPMessage() – Represents headers in HTTP responses.
+configparser Module (for Config File Handling)
+configparser.ConfigParser() – Creates a new configuration parser object.
+configparser.read(filenames) – Reads configuration from a file.
+configparser.get(section, option) – Retrieves the value of an option in a section.
+configparser.set(section, option, value) – Sets the value of an option in a section.
+configparser.write(file) – Writes configuration back to a file.
+glob Module (for File Pattern Matching)
+glob.glob(pattern) – Returns a list of file paths matching a specified pattern.
+glob.iglob(pattern) – Returns an iterator yielding file paths matching a pattern.
+uuid Module (for Unique Identifiers)
+uuid.uuid1() – Generates a UUID based on host ID and current time.
+uuid.uuid4() – Generates a random UUID.
+uuid.uuid5(namespace, name) – Generates a UUID based on a namespace and a name.
+pickle Module (for Object Serialization)
+pickle.dump(obj, file) – Serializes an object to a file.
+pickle.load(file) – Deserializes an object from a file.
+pickle.dumps(obj) – Serializes an object to a bytes string.
+pickle.loads(bytes) – Deserializes an object from a bytes string.
+xml.dom.minidom Module (for XML Parsing)
+xml.dom.minidom.parse(filename) – Parses XML data from a file and returns a DOM tree.
+xml.dom.minidom.parseString(string) – Parses XML data from a string and returns a DOM tree.
+xml.dom.minidom.Document() – Creates a new empty XML document.
+xml.dom.minidom.Element() – Represents an element in an XML document.
+email Module (for Email Processing)
+email.message.EmailMessage() – Creates a new email message object.
+email.message.add_header(name, value) – Adds a header to an email message.
+email.utils.formataddr(pair) – Formats an address from a name and email.
+email.mime.text.MIMEText(text) – Creates a MIMEText object for plain text emails.
+email.mime.multipart.MIMEMultipart() – Creates a multipart email message.
+hmac Module (for HMAC Authentication)
+hmac.new(key, msg, digestmod) – Creates a new HMAC object.
+hmac.update(msg) – Updates the HMAC object with additional data.
+hmac.digest() – Returns the HMAC value as bytes.
+hmac.hexdigest() – Returns the HMAC value as a hexadecimal string.
+statistics Module (for Statistical Functions)
+statistics.mean(data) – Returns the mean (average) of data.
+statistics.median(data) – Returns the median of data.
+statistics.mode(data) – Returns the most common data point in a sequence.
+statistics.stdev(data) – Returns the standard deviation of data.
+statistics.variance(data) – Returns the variance of data.
+argparse Module (for Command-Line Parsing)
+argparse.ArgumentParser() – Creates a new argument parser.
+add_argument(name, **kwargs) – Adds a command-line argument to the parser.
+parse_args() – Parses the command-line arguments.
+parse_known_args() – Parses arguments, ignoring unknown ones.
+zlib Module (for Compression)
+zlib.compress(data, level) – Compresses data with a specified compression level.
+zlib.decompress(data) – Decompresses compressed data.
+zlib.crc32(data) – Computes the CRC-32 checksum of data.
+inspect Module (for Introspection)
+inspect.getdoc(object) – Returns the docstring of an object.
+inspect.signature(callable) – Returns the signature of a callable object.
+inspect.getmembers(object) – Returns members of an object.
+inspect.isfunction(object) – Checks if the object is a function.
+inspect.ismethod(object) – Checks if the object is a method.
+pprint Module (for Pretty Printing)
+pprint.pprint(object) – Pretty-prints a data structure in a readable format.
+pprint.pformat(object) – Returns a pretty-printed string representation of a data structure.
+This should give you a broad overview of additional Python functions and modules for various tasks, including concurrency, data handling, GUI creation, network programming, and more. Let me know if you'd like more detailed examples for any specific module or function!
+
+
+
+
+
+
+You said:
+add more
+ChatGPT said:
+ChatGPT
+Certainly! Here’s a list of additional functions and methods from Python’s standard library, covering modules like re, itertools, functools, json, random, and other specialized areas for more advanced programming needs.
+
+re Module (for Regular Expressions)
+re.compile(pattern) – Compiles a regular expression pattern into a regex object for reuse.
+re.search(pattern, string) – Searches for a match of a pattern anywhere in the string.
+re.match(pattern, string) – Checks for a match only at the beginning of the string.
+re.findall(pattern, string) – Returns all non-overlapping matches of the pattern in the string.
+re.finditer(pattern, string) – Returns an iterator yielding match objects over all matches.
+re.sub(pattern, repl, string) – Replaces occurrences of a pattern with a replacement string.
+re.split(pattern, string) – Splits the string by occurrences of the pattern.
+itertools Module (for Iterators and Combinatorics)
+itertools.chain(*iterables) – Combines multiple iterables into a single iterator.
+itertools.cycle(iterable) – Cycles through an iterable indefinitely.
+itertools.repeat(object, times) – Repeats an object a specified number of times (or indefinitely).
+itertools.combinations(iterable, r) – Returns all r-length combinations of an iterable.
+itertools.permutations(iterable, r) – Returns all r-length permutations of an iterable.
+itertools.product(*iterables, repeat=1) – Returns the Cartesian product of input iterables.
+itertools.accumulate(iterable, func=operator.add) – Returns accumulated sums or results of a binary function.
+functools Module (for Higher-Order Functions)
+functools.partial(func, *args, **kwargs) – Returns a new partial function with fixed arguments.
+functools.reduce(function, iterable, initializer=None) – Applies a binary function cumulatively to reduce an iterable to a single value.
+functools.lru_cache(maxsize=128) – Caches function results to improve performance.
+functools.wraps(wrapped) – Updates a wrapper function to look more like the wrapped function.
+functools.singledispatch – Creates a single-dispatch generic function for multiple types.
+json Module (for JSON Data Handling)
+json.dumps(obj) – Serializes an object to a JSON-formatted string.
+json.loads(s) – Deserializes a JSON-formatted string to a Python object.
+json.dump(obj, file) – Serializes an object and writes it to a file.
+json.load(file) – Deserializes a JSON object from a file.
+random Module (for Random Data Generation)
+random.randint(a, b) – Returns a random integer between a and b, inclusive.
+random.choice(seq) – Selects a random element from a non-empty sequence.
+random.choices(population, weights=None, k=1) – Returns a list of k selections from the population with optional weights.
+random.shuffle(x) – Randomly shuffles a mutable sequence in place.
+random.sample(population, k) – Returns a list of k unique elements from the population.
+random.uniform(a, b) – Returns a random floating-point number between a and b.
+random.gauss(mu, sigma) – Returns a random number following a Gaussian distribution with mean mu and standard deviation sigma.
+bisect Module (for Binary Search)
+bisect.bisect_left(a, x) – Returns the index to insert x in a sorted list a (left insertion point).
+bisect.bisect_right(a, x) – Returns the index to insert x in a sorted list a (right insertion point).
+bisect.insort_left(a, x) – Inserts x into a while maintaining sorted order (left insertion).
+bisect.insort_right(a, x) – Inserts x into a while maintaining sorted order (right insertion).
+operator Module (for Functional Tools)
+operator.add(a, b) – Returns a + b.
+operator.mul(a, b) – Returns a * b.
+operator.itemgetter(i) – Returns a callable that fetches the i-th item from an object.
+operator.attrgetter(attr) – Returns a callable that fetches an attribute from an object.
+operator.methodcaller(name, *args, **kwargs) – Returns a callable that calls the named method on an object.
+math Module (for Mathematical Functions)
+math.sqrt(x) – Returns the square root of x.
+math.pow(x, y) – Returns x raised to the power of y.
+math.exp(x) – Returns e raised to the power of x.
+math.log(x, base) – Returns the logarithm of x to the given base.
+math.sin(x) – Returns the sine of x (in radians).
+math.cos(x) – Returns the cosine of x.
+math.factorial(x) – Returns the factorial of x.
+decimal Module (for Fixed-Point and Floating Decimal Arithmetic)
+decimal.Decimal(value) – Creates a Decimal object from value.
+decimal.getcontext() – Returns the current context for decimal operations.
+decimal.setcontext(context) – Sets a new context for decimal operations.
+decimal.localcontext(context=None) – Temporarily changes the context for a with block.
+fractions Module (for Rational Number Arithmetic)
+fractions.Fraction(numerator, denominator) – Creates a Fraction object from a numerator and denominator.
+fractions.Fraction.from_float(flt) – Converts a float to a Fraction object.
+fractions.Fraction.from_decimal(dec) – Converts a Decimal to a Fraction object.
+statistics Module (Additional Functions)
+statistics.harmonic_mean(data) – Returns the harmonic mean of data.
+statistics.geometric_mean(data) – Returns the geometric mean of data.
+statistics.median_high(data) – Returns the high median of data.
+statistics.median_low(data) – Returns the low median of data.
+secrets Module (for Cryptographic Security)
+secrets.token_bytes(nbytes) – Returns a random byte string of specified length.
+secrets.token_hex(nbytes) – Returns a random hexadecimal string.
+secrets.token_urlsafe(nbytes) – Returns a random URL-safe string.
+secrets.choice(seq) – Chooses a random element from a non-empty sequence with cryptographic security.
+typing Module (for Type Hints)
+typing.List[type] – Represents a list with elements of the specified type.
+typing.Dict[key_type, value_type] – Represents a dictionary with specified key and value types.
+typing.Tuple[type, ...] – Represents a tuple with elements of specified types.
+typing.Optional[type] – Represents an optional value, equivalent to Union[type, None].
+typing.Union[type1, type2, ...] – Represents a value that can be any of the specified types.
+weakref Module (for Weak References)
+weakref.ref(object) – Creates a weak reference to an object.
+weakref.WeakValueDictionary() – A dictionary that holds weak references to values.
+weakref.finalize(obj, func, *args, **kwargs) – Registers a callback to run when obj is garbage-collected.
+textwrap Module (for Text Wrapping and Filling)
+textwrap.wrap(text, width) – Wraps a single paragraph in text, returning a list of lines.
+textwrap.fill(text, width) – Wraps text and returns it as a single string.
+textwrap.shorten(text, width, placeholder='...') – Truncates text to fit a specified width.
+smtplib Module (for Sending Emails)
+smtplib.SMTP(host, port) – Connects to an SMTP server for sending emails.
+smtplib.login(user, password) – Logs into the SMTP server.
+smtplib.sendmail(from_addr, to_addrs, msg) – Sends an email message.
+smtplib.quit() – Closes the connection to the SMTP server.
+unittest Module (for Unit Testing)
+unittest.TestCase() – Base class for test cases.
+unittest.main() – A command-line interface for running tests.
+unittest.mock.Mock() – Creates a mock object for testing.
+unittest.assertEqual(a, b) – Asserts that a == b.
+unittest.assertRaises(exception, func, *args, **kwargs) – Asserts that a specific exception is raised.
+This extensive list covers an array of functions across many different domains, from concurrency and file handling to cryptographic and statistical functions. Let me know if you'd like to explore code examples for any specific category!
+
+
+
+
+
+
+You said:
+add more
+ChatGPT said:
+ChatGPT
+Sure! Here’s an even deeper dive into some less commonly used but very powerful functions across Python’s standard libraries. This set includes additional methods for network programming, specialized file handling, extended date and time manipulation, and even modules for sound and image processing.
+
+socket Module (for Network Programming)
+socket.socket(family, type) – Creates a new socket for network communication.
+socket.bind(address) – Binds a socket to a specific network interface and port.
+socket.listen(backlog) – Enables a server to accept connections.
+socket.accept() – Accepts a connection from a client.
+socket.connect(address) – Connects to a remote socket at the specified address.
+socket.send(data) – Sends data to a connected socket.
+socket.recv(bufsize) – Receives data from a connected socket.
+ssl Module (for Secure Sockets Layer)
+ssl.create_default_context() – Creates a secure SSL context with default settings.
+ssl.wrap_socket(sock, keyfile=None, certfile=None) – Wraps an existing socket for SSL encryption.
+ssl.SSLContext() – Creates a new SSL context for configuration.
+SSLContext.load_cert_chain(certfile, keyfile) – Loads a certificate chain for SSL.
+SSLContext.wrap_socket(sock, server_hostname=None) – Wraps a socket for SSL encryption in the context.
+shutil Module (for File Operations)
+shutil.copy(src, dst) – Copies a file from src to dst.
+shutil.copytree(src, dst) – Recursively copies an entire directory tree.
+shutil.move(src, dst) – Moves a file or directory to a new location.
+shutil.rmtree(path) – Recursively deletes a directory tree.
+shutil.disk_usage(path) – Returns disk usage statistics (total, used, free).
+shutil.make_archive(base_name, format, root_dir) – Creates an archive file (like zip or tar).
+tempfile Module (for Temporary File Creation)
+tempfile.TemporaryFile() – Creates a temporary file that is deleted after use.
+tempfile.NamedTemporaryFile() – Creates a temporary file with a name.
+tempfile.TemporaryDirectory() – Creates a temporary directory that is deleted after use.
+tempfile.gettempdir() – Returns the default directory for temporary files.
+tempfile.mkstemp() – Creates a unique temporary file and returns its file descriptor and path.
+timeit Module (for Timing Code Execution)
+timeit.timeit(stmt, setup, number) – Times the execution of a statement.
+timeit.repeat(stmt, setup, repeat, number) – Repeats timing multiple times for accuracy.
+timeit.default_timer() – Returns the best clock available for timing.
+datetime Module (for Advanced Date and Time Manipulation)
+datetime.datetime.now() – Returns the current local date and time.
+datetime.datetime.utcnow() – Returns the current UTC date and time.
+datetime.datetime.fromtimestamp(timestamp) – Converts a POSIX timestamp to a datetime.
+datetime.timedelta(days, seconds, microseconds) – Represents the difference between two dates or times.
+datetime.date.today() – Returns the current local date.
+datetime.datetime.strftime(format) – Formats a date/time as a string.
+datetime.datetime.strptime(date_string, format) – Parses a date/time string into a datetime object.
+csv Module (for Handling CSV Files)
+csv.reader(file) – Reads rows from a CSV file.
+csv.writer(file) – Writes rows to a CSV file.
+csv.DictReader(file) – Reads rows from a CSV file as dictionaries.
+csv.DictWriter(file, fieldnames) – Writes rows as dictionaries to a CSV file.
+writer.writerow(row) – Writes a single row to the CSV file.
+tarfile Module (for TAR File Handling)
+tarfile.open(name, mode) – Opens a tar archive for reading or writing.
+tarfile.add(name) – Adds a file to the archive.
+tarfile.extractall(path) – Extracts all members from the archive to a directory.
+tarfile.list() – Lists the contents of the archive.
+tarfile.getmember(name) – Returns a single member from the archive.
+gzip Module (for GZIP File Compression)
+gzip.open(filename, mode) – Opens a gzip-compressed file for reading or writing.
+gzip.compress(data) – Compresses data into gzip format.
+gzip.decompress(data) – Decompresses gzip data.
+wave Module (for Working with WAV Files)
+wave.open(filename, mode) – Opens a WAV file for reading or writing.
+wave.getnchannels() – Returns the number of audio channels.
+wave.getframerate() – Returns the sampling frequency.
+wave.readframes(n) – Reads and returns n audio frames from the file.
+wave.writeframes(data) – Writes audio frames to the file.
+audioop Module (for Audio Processing)
+audioop.add(fragment1, fragment2, width) – Adds two audio fragments.
+audioop.mul(fragment, width, factor) – Multiplies audio fragment by a factor.
+audioop.rms(fragment, width) – Calculates the root-mean-square of an audio fragment.
+zipfile Module (for ZIP File Handling)
+zipfile.ZipFile(filename, mode) – Opens a ZIP file for reading or writing.
+zipfile.extractall(path) – Extracts all files from the ZIP archive to the specified path.
+zipfile.write(filename) – Adds a file to the ZIP archive.
+zipfile.namelist() – Returns a list of file names in the ZIP archive.
+xml.etree.ElementTree Module (for XML Parsing and Creation)
+ElementTree.parse(source) – Parses an XML file into an ElementTree.
+ElementTree.Element(tag, attrib={}) – Creates a new XML element.
+ElementTree.SubElement(parent, tag, attrib={}) – Creates a new child element.
+ElementTree.find(path) – Finds the first matching subelement by path.
+ElementTree.write(file, encoding="utf-8") – Writes the ElementTree to a file.
+argparse Module (Additional Argument Parsing Features)
+ArgumentParser.add_mutually_exclusive_group() – Adds a mutually exclusive group of arguments to the parser.
+ArgumentParser.add_subparsers() – Adds subcommands to the parser.
+ArgumentParser.set_defaults(**kwargs) – Sets default values for arguments.
+traceback Module (for Error Tracebacks)
+traceback.print_exc() – Prints the exception traceback to stderr.
+traceback.format_exc() – Returns the traceback as a formatted string.
+traceback.extract_tb(tb) – Extracts and returns a list of traceback entries.
+base64 Module (for Base64 Encoding)
+base64.b64encode(data) – Encodes data to base64 format.
+base64.b64decode(data) – Decodes base64-encoded data.
+base64.urlsafe_b64encode(data) – Encodes data to a URL-safe base64 format.
+base64.urlsafe_b64decode(data) – Decodes URL-safe base64-encoded data.
+hashlib Module (for Hashing)
+hashlib.md5(data) – Returns an MD5 hash object initialized with data.
+hashlib.sha256(data) – Returns a SHA-256 hash object initialized with data.
+hashlib.sha512(data) – Returns a SHA-512 hash object initialized with data.
+hashlib.pbkdf2_hmac(hash_name, password, salt, iterations) – Computes a hash-based message authentication code (HMAC) using PBKDF2.
+inspect Module (More Introspection)
+inspect.getfile(object) – Returns the file where an object was defined.
+inspect.getsource(object) – Returns the source code of an object.
+inspect.getargspec(func) – Returns the argument specification for a function.
+logging Module (for Logging)
+logging.basicConfig(level) – Configures the logging system with a basic setup.
+logging.getLogger(name) – Returns a logger with the specified name.
+logger.debug(msg) – Logs a debug-level message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+http.client Module (for HTTP Client)
+HTTPConnection.request(method, url, body=None, headers={}) – Sends a request to the server.
+HTTPConnection.getresponse() – Gets the response from the server.
+HTTPConnection.close() – Closes the connection to the server.
+HTTPConnection.set_tunnel(host, port=None) – Sets up a tunnel to the host.
+http.server Module (for HTTP Server)
+http.server.HTTPServer – A basic HTTP server.
+http.server.BaseHTTPRequestHandler – Base class for handling HTTP requests.
+http.server.SimpleHTTPRequestHandler – A simple HTTP request handler.
+http.server.test(HandlerClass) – Runs a test HTTP server.
+sqlite3 Module (for SQLite Database)
+sqlite3.connect(database) – Connects to an SQLite database.
+Connection.cursor() – Creates a new cursor object for executing SQL commands.
+Cursor.execute(sql, parameters=()) – Executes a SQL query.
+Cursor.fetchall() – Fetches all rows of a query result.
+Cursor.commit() – Commits the current transaction.
+Connection.close() – Closes the database connection.
+Connection.execute(sql) – Executes a single SQL command.
+xml.dom Module (for XML Document Object Model)
+xml.dom.minidom.parse(file) – Parses an XML file into a DOM object.
+xml.dom.minidom.parseString(string) – Parses an XML string into a DOM object.
+Element.setAttribute(name, value) – Sets the value of an attribute on an element.
+Element.getElementsByTagName(tagName) – Returns a list of elements with a specified tag name.
+Document.createElement(tagName) – Creates a new element with the specified tag name.
+Document.createTextNode(data) – Creates a new text node.
+xml.etree.ElementTree Module (for XML Processing)
+ElementTree.ElementTree(element) – Initializes an ElementTree object from an element.
+ElementTree.write(file, encoding="utf-8") – Writes an ElementTree to a file.
+Element.tag – The tag name of the element.
+Element.text – The text content of the element.
+Element.append(child) – Adds a child element to the current element.
+Element.remove(child) – Removes a child element from the current element.
+configparser Module (for Configuration Files)
+ConfigParser.ConfigParser() – Creates a new config parser instance.
+ConfigParser.read(filenames) – Reads and parses configuration files.
+ConfigParser.get(section, option) – Retrieves an option value from a section.
+ConfigParser.set(section, option, value) – Sets an option value in a section.
+ConfigParser.add_section(section) – Adds a new section to the configuration.
+xmlrpc.client Module (for XML-RPC)
+xmlrpc.client.ServerProxy(uri) – Creates a proxy for an XML-RPC server.
+ServerProxy.call(method, *args) – Calls a method on the server with arguments.
+ServerProxy.system.listMethods() – Lists the available methods on the server.
+xmlrpc.server Module (for XML-RPC Server)
+xmlrpc.server.SimpleXMLRPCServer() – A simple XML-RPC server.
+SimpleXMLRPCServer.register_function(func, name=None) – Registers a function with the server.
+SimpleXMLRPCServer.serve_forever() – Starts the server and handles requests indefinitely.
+json Module (for JSON Handling)
+json.dump(obj, fp) – Serializes an object to a JSON formatted stream.
+json.load(fp) – Deserializes a JSON object from a file.
+json.JSONDecoder() – Creates a JSON decoder instance.
+json.JSONEncoder() – Creates a JSON encoder instance.
+json.JSONDecodeError – Exception raised when JSON decoding fails.
+dataclasses Module (for Data Classes)
+dataclasses.dataclass – A decorator for creating data classes.
+dataclasses.field() – Used to define a field in a data class.
+dataclasses.asdict(obj) – Converts a data class to a dictionary.
+dataclasses.replace(obj, **kwargs) – Creates a new instance of a data class with updated values.
+multiprocessing Module (for Concurrent Execution)
+multiprocessing.Process(target) – Creates a new process to run a target function.
+multiprocessing.Queue() – A FIFO queue for inter-process communication.
+multiprocessing.Pipe() – Creates a pair of connection objects for inter-process communication.
+multiprocessing.Pool() – Creates a pool of worker processes for parallel execution.
+Process.start() – Starts a process.
+Process.join() – Waits for the process to finish.
+concurrent.futures Module (for Asynchronous Execution)
+concurrent.futures.ThreadPoolExecutor – Manages a pool of threads for asynchronous execution.
+concurrent.futures.ProcessPoolExecutor – Manages a pool of processes for parallel execution.
+submit(fn, *args, **kwargs) – Submits a callable to be executed asynchronously.
+map(fn, *iterables) – Applies a function to the arguments from the iterables.
+collections Module (for Specialized Container Datatypes)
+collections.Counter() – A dict subclass for counting hashable objects.
+collections.defaultdict(default_factory) – A dict subclass that returns a default value for missing keys.
+collections.deque() – A double-ended queue for fast appends and pops from both ends.
+collections.namedtuple(typename, field_names) – Factory function for creating tuple subclasses with named fields.
+collections.OrderedDict() – A dict that remembers the order entries were added.
+functools Module (for Functional Programming Tools)
+functools.update_wrapper(wrapper, wrapped) – Updates a wrapper function to look more like the wrapped function.
+functools.total_ordering(cls) – A class decorator that fills in missing comparison methods.
+queue Module (for Queue Implementation)
+queue.Queue() – A FIFO queue.
+queue.LifoQueue() – A last-in, first-out queue (stack).
+queue.PriorityQueue() – A priority queue for processing items based on priority.
+Queue.put(item) – Adds an item to the queue.
+Queue.get() – Removes and returns an item from the queue.
+readline Module (for Readline Interface)
+readline.get_startup_commands() – Gets the commands to be executed on startup.
+readline.set_startup_commands(commands) – Sets commands to be executed on startup.
+readline.get_line_buffer() – Gets the current line buffer.
+readline.clear_history() – Clears the history of input lines.
+pickle Module (for Object Serialization)
+pickle.dump(obj, file) – Serializes an object to a file.
+pickle.load(file) – Deserializes an object from a file.
+pickle.dumps(obj) – Serializes an object to a bytes object.
+pickle.loads(bytes) – Deserializes an object from a bytes object.
+xml.parsers.expat Module (for XML Parsing)
+xml.parsers.expat.ParserCreate() – Creates a new XML parser.
+parser.Parse(data) – Parses a chunk of XML data.
+parser.ParsingComplete() – Checks if the parsing is complete.
+curses Module (for Terminal Handling)
+curses.initscr() – Initializes the curses module.
+curses.newwin(height, width, begin_y, begin_x) – Creates a new window.
+curses.wrapper(func) – Runs a function within the curses context.
+socketserver Module (for Socket Server Framework)
+socketserver.TCPServer() – A basic TCP server.
+socketserver.BaseRequestHandler – Base class for request handlers.
+socketserver.UDPServer() – A basic UDP server.
+hashlib Module (for Cryptographic Hash Functions)
+hashlib.new(name, data=b'') – Creates a new hash object of the specified type.
+hashlib.pbkdf2_hmac(hash_name, password, salt, iterations) – Key derivation function.
+inspect Module (for Introspection)
+inspect.getmembers(object) – Returns all members of an object.
+inspect.isfunction(object) – Checks if an object is a function.
+inspect.isclass(object) – Checks if an object is a class.
+inspect.ismethod(object) – Checks if an object is a method.
+string Module (for String Operations)
+string.ascii_letters – A string of all ASCII letters.
+string.digits – A string of all digits.
+string.punctuation – A string of all punctuation characters.
+string.Template – A class for string substitutions.
+platform Module (for Accessing Platform Information)
+platform.system() – Returns the name of the operating system.
+platform.release() – Returns the OS release version.
+platform.version() – Returns the OS version.
+platform.architecture() – Returns the architecture of the OS.
+datetime Module (for Date and Time Manipulation)
+datetime.datetime.combine(date, time) – Combines a date and a time into a datetime.
+datetime.timedelta.total_seconds() – Returns the total number of seconds in a timedelta.
+ctypes Module (for C Data Types)
+ctypes.CDLL(name) – Loads a shared library.
+ctypes.c_int(value) – Creates a C integer from a Python integer.
+ctypes.c_double(value) – Creates a C double from a Python float.
+subprocess Module (for Running External Commands)
+subprocess.run(args, **kwargs) – Runs a command and waits for it to finish.
+subprocess.Popen(args, **kwargs) – Executes a command in a new process.
+subprocess.call(args, **kwargs) – Runs a command and waits for it to complete.
+decimal Module (for Decimal Fixed Point and Floating Point Arithmetic)
+decimal.Decimal(value) – Creates a new Decimal object.
+decimal.getcontext() – Returns the current context for Decimal operations.
+decimal.localcontext() – Creates a context for decimal operations that will not affect the global context.
+threading Module (for Threading)
+threading.Thread(target) – Creates a new thread to run a target function.
+threading.Lock() – Creates a lock object for thread synchronization.
+threading.Condition() – Creates a condition variable for thread synchronization.
+threading.Event() – Creates an event object for signaling between threads.
+email Module (for Email Handling)
+email.message.EmailMessage() – Creates a new email message.
+email.message_from_string(string) – Parses an email message from a string.
+email.utils.formataddr((name, addr)) – Formats an address for email.
+random Module (for Random Number Generation)
+random.random() – Returns a random float in the range [0.0, 1.0).
+random.randint(a, b) – Returns a random integer between a and b, inclusive.
+random.choice(sequence) – Returns a random element from a non-empty sequence.
+os Module (for Operating System Interaction)
+os.getcwd() – Returns the current working directory.
+os.listdir(path) – Returns a list of entries in the specified directory.
+os.path.exists(path) – Checks if a path exists.
+fnmatch Module (for Filename Matching)
+fnmatch.fnmatch(filename, pattern) – Checks if a filename matches a given pattern.
+fnmatch.fnmatchcase(filename, pattern) – Checks if a filename matches a given pattern with case sensitivity.
+shutil Module (for High-Level File Operations)
+shutil.rmtree(path) – Recursively deletes a directory.
+shutil.move(src, dst) – Moves a file or directory to a new location.
+shutil.copyfile(src, dst) – Copies the contents of a file.
+bisect Module (for Maintaining a Sorted List)
+bisect.bisect_left(a, x) – Finds the insertion point for x in a to maintain sorted order.
+bisect.bisect_right(a, x) – Finds the insertion point for x in a to maintain sorted order.
+time Module (for Time Functions)
+time.sleep(seconds) – Suspends execution for the given number of seconds.
+time.time() – Returns the current time in seconds since the epoch.
+time.localtime(seconds) – Converts seconds since the epoch to local time.
+webbrowser Module (for Web Browsers)
+webbrowser.open(url) – Opens a URL in the default web browser.
+webbrowser.open_new(url) – Opens a URL in a new browser window.
+pprint Module (for Pretty-Printing Data Structures)
+pprint.pprint(object) – Pretty-prints a Python object.
+pprint.PrettyPrinter() – Creates a PrettyPrinter instance for custom pretty-printing.
+binascii Module (for Binary and ASCII Conversions)
+binascii.b2a_hex(data) – Converts binary data to a hexadecimal representation.
+binascii.a2b_hex(data) – Converts hexadecimal data to binary.
+codecs Module (for Encoding and Decoding)
+codecs.open(filename, mode, encoding) – Opens a file with a specific encoding.
+codecs.encode(obj, encoding) – Encodes an object to a specified encoding.
+codecs.decode(obj, encoding) – Decodes an encoded object to its original form.
+timeit Module (for Timing Execution)
+timeit.timeit(stmt, setup, number) – Times the execution of a statement.
+timeit.repeat(stmt, setup, repeat, number) – Repeats timing a statement multiple times.
+warnings Module (for Warning Messages)
+warnings.warn(message, category) – Issues a warning.
+warnings.filterwarnings(action, message='', category=None) – Modifies the behavior of warnings.
+trace Module (for Tracing Python Program Execution)
+trace.run(statement) – Executes a statement while tracing its execution.
+trace.Trace(count=False, trace=True) – Creates a trace object for program execution tracing.
+getpass Module (for Password Input)
+getpass.getpass(prompt='') – Prompts for a password without echoing.
+getpass.getuser() – Returns the username of the current user.
+cProfile Module (for Profiling Python Programs)
+cProfile.run(statement) – Runs a statement under the profiler.
+cProfile.Profile() – Creates a new profiling object.
+pdb Module (for Debugging)
+pdb.set_trace() – Sets a trace point for debugging.
+pdb.run(statement) – Runs a statement under the debugger.
+ssl Module (for Secure Sockets Layer)
+ssl.create_default_context() – Creates a new SSL context with default settings.
+ssl.wrap_socket(sock) – Wraps a socket in SSL.
+subprocess Module (for Running Commands)
+subprocess.run(command) – Runs a command and waits for it to finish.
+subprocess.Popen(command) – Executes a command in a new process.
+socket Module (for Network Sockets)
+socket.socket() – Creates a new socket.
+socket.bind(address) – Binds the socket to an address.
+inspect Module (for Introspection)
+inspect.getdoc(object) – Returns the documentation string for an object.
+inspect.signature(callable) – Returns a Signature object for a callable.
+fnmatch Module (for Filename Matching)
+fnmatch.fnmatch(name, pattern) – Checks if a name matches a pattern.
+fnmatch.fnmatchcase(name, pattern) – Matches a name against a pattern with case sensitivity.
+turtle Module (for Simple Graphics)
+turtle.forward(distance) – Moves the turtle forward by the specified distance.
+turtle.right(angle) – Turns the turtle clockwise by the specified angle.
+turtle.left(angle) – Turns the turtle counterclockwise by the specified angle.
+turtle.done() – Completes the turtle graphics program.
+locale Module (for Localization)
+locale.setlocale(category, locale) – Sets the locale for the program.
+locale.getlocale(category) – Gets the current locale for the specified category.
+calendar Module (for Calendar Functions)
+calendar.month(year, month) – Returns a month’s calendar as a multi-line string.
+calendar.isleap(year) – Checks if a year is a leap year.
+statistics Module (for Statistical Functions)
+statistics.mean(data) – Returns the arithmetic mean of data.
+statistics.median(data) – Returns the median of data.
+statistics.stdev(data) – Returns the standard deviation of data.
+pickle Module (for Serialization)
+pickle.dump(obj, file) – Serializes an object to a file.
+pickle.load(file) – Deserializes an object from a file.
+array Module (for Arrays)
+array.array(typecode, initializer) – Creates an array of a specified type.
+array.array.fromlist(list) – Creates an array from a list.
+json Module (for JSON Serialization)
+json.dumps(obj) – Serializes an object to a JSON formatted string.
+json.loads(s) – Deserializes a JSON formatted string to a Python object.
+uuid Module (for Unique Identifiers)
+uuid.uuid1() – Generates a UUID based on the host ID and current time.
+uuid.uuid4() – Generates a random UUID.
+hashlib Module (for Hash Functions)
+hashlib.md5() – Creates a new MD5 hash object.
+hashlib.sha256() – Creates a new SHA-256 hash object.
+xml.etree.ElementTree Module (for XML Processing)
+ElementTree.parse(filename) – Parses an XML file into an ElementTree object.
+ElementTree.Element(tag) – Creates a new element with a given tag.
+smtplib Module (for Sending Emails)
+smtplib.SMTP(host, port) – Creates an SMTP client session object.
+SMTP.sendmail(from_addr, to_addrs, msg) – Sends an email.
+ftplib Module (for FTP Protocols)
+ftplib.FTP(host='', user='', passwd='', acct='') – Creates an FTP client.
+FTP.retrbinary(cmd, callback) – Retrieves a file in binary mode.
+hashlib Module (for Hash Functions)
+hashlib.sha1() – Creates a SHA-1 hash object.
+hashlib.sha512() – Creates a SHA-512 hash object.
+socket Module (for Networking)
+socket.socket(family, type) – Creates a new socket using the specified address family and socket type.
+socket.connect(address) – Connects the socket to a remote address.
+re Module (for Regular Expressions)
+re.search(pattern, string) – Searches the string for a match to the pattern.
+re.findall(pattern, string) – Finds all occurrences of the pattern in the string.
+re.sub(pattern, repl, string) – Replaces occurrences of the pattern in the string with a replacement.
+base64 Module (for Base64 Encoding)
+base64.b64encode(data) – Encodes binary data to Base64.
+base64.b64decode(data) – Decodes Base64 data back to binary.
+ctypes Module (for C Data Types)
+ctypes.c_char() – C character data type.
+ctypes.c_double() – C double data type.
+sqlite3 Module (for SQLite Databases)
+sqlite3.connect(database) – Connects to an SQLite database.
+Connection.execute(sql) – Executes a SQL statement.
+signal Module (for Asynchronous Notifications)
+signal.signal(signalnum, handler) – Sets the handler for a signal.
+signal.pause() – Waits for a signal to arrive.
+glob Module (for Filename Pattern Matching)
+glob.glob(pathname) – Returns a list of file paths matching a pathname pattern.
