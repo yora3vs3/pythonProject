@@ -2,8 +2,8 @@ import os
 import shutil
 
 # Define the old and new file names
-old_filename = 'statistics.py'
-new_filename = 'my_statistics.py'
+old_filename = 'queue.py'
+new_filename = 'queue1.py'
 
 # Check if the file exists and rename it
 if os.path.exists(old_filename):

@@ -1,71 +1,157 @@
-# Open a file in read and write mode
-with open("example.txt", "w+") as file:
-    # write(): Write some content to the file
-    file.write("Hello, world!\nThis is a sample text file.")
+import os
+import json
+import csv
+import pickle
+from datetime import datetime
 
-    # flush(): Flush the internal buffer, forcing a write to disk
-    file.flush()
+# Directory setup
+if not os.path.exists("library_data"):
+    os.makedirs("library_data")
 
-    # writable(): Check if the file is writable
-    print("Is the file writable?", file.writable())
+# Sample data
+books = [
+    {"title": "1984", "author": "George Orwell", "year": 1949},
+    {"title": "To Kill a Mockingbird", "author": "Harper Lee", "year": 1960},
+    {"title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "year": 1925},
+]
 
-    # tell(): Get the current position in the file
-    print("Current file position:", file.tell())
 
-    # seek(): Move to the beginning of the file
-    file.seek(0)
+# Writing to a text file
+def write_text_file(filename, data):
+    with open(f"library_data/{filename}", "w") as file:
+        for book in data:
+            file.write(f"{book['title']}, by {book['author']} ({book['year']})\n")
+    print(f"Data written to {filename} successfully.\n")
 
-    # readable(): Check if the file is readable
-    print("Is the file readable?", file.readable())
 
-    # read(): Read the entire file content
-    content = file.read()
-    print("File content:\n", content)
+# Reading from a text file
+def read_text_file(filename):
+    try:
+        with open(f"library_data/{filename}", "r") as file:
+            print(f"Reading from {filename}:\n")
+            print(file.read())
+    except FileNotFoundError:
+        print(f"{filename} not found.\n")
 
-    # readline(): Read the first line from the file
-    file.seek(0)
-    print("First line:", file.readline())
 
-    # readlines(): Read all lines and return as a list
-    file.seek(0)
-    lines = file.readlines()
-    print("All lines as a list:", lines)
+# Writing to a JSON file
+def write_json_file(filename, data):
+    with open(f"library_data/{filename}", "w") as file:
+        json.dump(data, file, indent=4)
+    print(f"Data written to {filename} as JSON.\n")
 
-    # writable(): Check if file is writable before attempting write operations
-    if file.writable():
-        # write(): Write another line to the file
-        file.write("\nAppending a new line.")
 
-        # writelines(): Write multiple lines to the file
-        file.writelines(["\nLine 1", "\nLine 2", "\nLine 3"])
+# Reading from a JSON file
+def read_json_file(filename):
+    try:
+        with open(f"library_data/{filename}", "r") as file:
+            data = json.load(file)
+            print(f"Reading from {filename}:\n{json.dumps(data, indent=4)}\n")
+    except FileNotFoundError:
+        print(f"{filename} not found.\n")
 
-    # seekable(): Check if file allows changing the file position
-    print("Is the file seekable?", file.seekable())
 
-    # seek() again to read the new content from the beginning
-    file.seek(0)
-    print("Updated file content:\n", file.read())
+# Writing to a CSV file
+def write_csv_file(filename, data):
+    with open(f"library_data/{filename}", "w", newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=["title", "author", "year"])
+        writer.writeheader()
+        writer.writerows(data)
+    print(f"Data written to {filename} as CSV.\n")
 
-    # truncate(): Resize the file to 20 bytes
-    file.truncate(20)
-    file.seek(0)
-    print("Truncated file content:\n", file.read())
 
-    # isatty(): Check if the file stream is interactive (usually False for file streams)
-    print("Is the file interactive?", file.isatty())
+# Reading from a CSV file
+def read_csv_file(filename):
+    try:
+        with open(f"library_data/{filename}", "r") as file:
+            reader = csv.DictReader(file)
+            print(f"Reading from {filename}:\n")
+            for row in reader:
+                print(row)
+            print()
+    except FileNotFoundError:
+        print(f"{filename} not found.\n")
 
-    # fileno(): Get the file descriptor
-    print("File descriptor number:", file.fileno())
 
-# detach() and close() can be demonstrated with a different type of file handling in binary mode
-import io
+# Writing to a binary file using Pickle
+def write_pickle_file(filename, data):
+    with open(f"library_data/{filename}", "wb") as file:
+        pickle.dump(data, file)
+    print(f"Data written to {filename} as a binary Pickle file.\n")
 
-with open("example.txt", "wb+") as file:
-    # Write binary data to the file
-    file.write(b"Binary data example.")
 
-    # detach(): Separate the underlying binary buffer from the TextIOWrapper
-    raw = file.detach()
-    print("Detached raw stream:", raw)
-    pass
-# After detach(), the file object is no longer usable for read/write operations.
+# Reading from a binary file using Pickle
+def read_pickle_file(filename):
+    try:
+        with open(f"library_data/{filename}", "rb") as file:
+            data = pickle.load(file)
+            print(f"Reading from {filename}:\n{data}\n")
+    except FileNotFoundError:
+        print(f"{filename} not found.\n")
+
+
+# Appending data to a text file
+def append_text_file(filename, data):
+    with open(f"library_data/{filename}", "a") as file:
+        for book in data:
+            file.write(f"{book['title']}, by {book['author']} ({book['year']})\n")
+    print(f"Data appended to {filename} successfully.\n")
+
+
+# Using seek to navigate within a file
+def demonstrate_seek(filename):
+    try:
+        with open(f"library_data/{filename}", "r") as file:
+            print("Reading first 20 characters:\n")
+            print(file.read(20))
+
+            # Moving back to the beginning of the file
+            file.seek(0)
+            print("\nAfter seek to beginning, reading first line:\n")
+            print(file.readline())
+    except FileNotFoundError:
+        print(f"{filename} not found.\n")
+
+
+# Demonstrating error handling in file handling
+def delete_file(filename):
+    try:
+        os.remove(f"library_data/{filename}")
+        print(f"{filename} deleted successfully.\n")
+    except FileNotFoundError:
+        print(f"{filename} does not exist, nothing to delete.\n")
+
+
+# Using file modification and access timestamps
+def file_timestamps(filename):
+    try:
+        stats = os.stat(f"library_data/{filename}")
+        print(f"Last access time for {filename}: {datetime.fromtimestamp(stats.st_atime)}")
+        print(f"Last modification time for {filename}: {datetime.fromtimestamp(stats.st_mtime)}\n")
+    except FileNotFoundError:
+        print(f"{filename} not found.\n")
+
+
+# Execute the functions to demonstrate usage
+write_text_file("books.txt", books)
+read_text_file("books.txt")
+
+append_text_file("books.txt", [{"title": "Pride and Prejudice", "author": "Jane Austen", "year": 1813}])
+read_text_file("books.txt")
+
+write_json_file("books.json", books)
+read_json_file("books.json")
+
+write_csv_file("books.csv", books)
+read_csv_file("books.csv")
+
+write_pickle_file("books.pkl", books)
+read_pickle_file("books.pkl")
+
+demonstrate_seek("books.txt")
+
+file_timestamps("books.txt")
+delete_file("books.txt")
+delete_file("books.json")
+delete_file("books.csv")
+delete_file("books.pkl")
